@@ -1,196 +1,180 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelliblock Consulting - Quantitative & Economic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Smooth scroll behavior via CSS */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Hero background with a professional, abstract image */
+        .hero-bg-image {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://placehold.co/1920x1080/111827/667eea?text=Abstract+Data+Visualization');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Smooth transition for mobile menu visibility */
+        #mobile-menu.hidden {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        #mobile-menu {
+            max-height: 500px; /* Adjust as needed */
+            overflow: hidden;
+            transition: max-height 0.3s ease-in;
+        }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Intelliblock Consulting - Quantitative &amp; Economic Analysis&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Smooth scroll behavior via CSS */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>html {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Hero background with a professional, abstract image */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero-bg-image {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://placehold.co/1920x1080/111827/667eea?text=Abstract+Data+Visualization');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-size: cover;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-attachment: fixed; /* Parallax effect */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.cta-button {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.cta-button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Smooth transition for mobile menu visibility */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#mobile-menu.hidden {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-height: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: max-height 0.3s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>#mobile-menu {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-height: 500px; /* Adjust as needed */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: max-height 0.3s ease-in;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-gray-50 text-gray-800"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Header with backdrop blur for a modern look --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="container mx-auto px-6 py-4 flex justify-between items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="text-2xl font-bold text-gray-900"&gt;Intelliblock Consulting&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hidden md:flex items-center space-x-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300"&gt;Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#whitepaper" class="text-gray-600 hover:text-blue-600 transition-colors duration-300"&gt;White Paper&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#contact" class="bg-blue-600 text-white py-2 px-5 rounded-lg hover:bg-blue-700 cta-button"&gt;Contact Us&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="mobile-menu-button" class="md:hidden flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"&gt;&lt;/path&gt;&lt;/svg&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Mobile Menu --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#services" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100"&gt;Services&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#whitepaper" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100"&gt;White Paper&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#about" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#contact" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100"&gt;Contact Us&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Hero Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="home" class="hero-bg-image text-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6 py-32 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4"&gt;Bridging Vision &amp; Viability&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto"&gt;We provide data-driven, quantitative analysis to de-risk major infrastructure projects and transform ambitious national goals into bankable realities.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#whitepaper" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button hover:bg-blue-700"&gt;Read Our Independent Analysis&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Services Section with icons and hover effects --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="services" class="py-20 bg-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>&lt;h2 class="text-3xl md:text-4xl font-bold"&gt;Our Core Expertise&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>&lt;p class="text-gray-600 mt-2"&gt;Specialized services to ensure project bankability.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-10"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-center mb-5"&gt;&lt;div class="bg-blue-100 p-4 rounded-full"&gt;&lt;svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h12A2.25 2.25 0 0 0 20.25 14.25V3.75M3.75 14.25V3.75m0 10.5a2.25 2.25 0 0 0 2.25 2.25h12a2.25 2.25 0 0 0 2.25-2.25m-14.25 0V3.75" /&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4 text-center"&gt;Business Case Development&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600 text-center"&gt;We build sophisticated financial models (OBC/FBC) that quantify risk, forecast viability, and meet the rigorous standards of international investors and regulatory bodies like the ICRC.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-center mb-5"&gt;&lt;div class="bg-blue-100 p-4 rounded-full"&gt;&lt;svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-1.106-2.264 0-3.09C10.544 7.26 11.274 7 12 7c.726 0 1.451.22 2.003.659 1.106.826 1.106 2.264 0 3.09-.553.44-1.273.659-2.003.659Z" /&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4 text-center"&gt;PPP Transaction Advisory&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600 text-center"&gt;We structure bankable Public-Private Partnerships, aligning project goals with the fiscal realities of government and the return expectations of private capital.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-center mb-5"&gt;&lt;div class="bg-blue-100 p-4 rounded-full"&gt;&lt;svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" /&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" /&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-4 text-center"&gt;Macroeconomic &amp; Policy Analysis&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600 text-center"&gt;Leveraging advanced econometric modeling (FAVAR), we analyze the impact of fiscal and regulatory changes on project viability, providing a layer of strategic foresight.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- White Paper CTA Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="whitepaper" class="py-20 bg-gray-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">         </span>&lt;div class="container mx-auto px-6 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold mb-4"&gt;Independent Insight: The HSR Project&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto"&gt;Our flagship analysis, "A Data-Driven Blueprint for Delivering Nigeria's First High-Speed Rail Line by 2031," is now available.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto text-left"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold mb-6"&gt;Key Findings:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="space-y-4 text-gray-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;&lt;svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /&gt;&lt;/svg&gt;&lt;span&gt;&lt;strong&gt;Bankable Vision:&lt;/strong&gt; Projected baseline &lt;strong&gt;IRR of 18.2%&lt;/strong&gt;, exceeding investor hurdles.&lt;/span&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;&lt;svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /&gt;&lt;/svg&gt;&lt;span&gt;&lt;strong&gt;The Tax Act Advantage:&lt;/strong&gt; The 2025 Tax Act's 15-year "Priority Sector" tax credit is the critical enabler.&lt;/span&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;&lt;svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /&gt;&lt;/svg&gt;&lt;span&gt;&lt;strong&gt;Hybrid Financing is Key:&lt;/strong&gt; A 20% (GoN) / 50% (Private) / 30% (DFI) co-financing structure is optimal.&lt;/span&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li class="flex items-start"&gt;&lt;svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /&gt;&lt;/svg&gt;&lt;span&gt;&lt;strong&gt;Political Realism:&lt;/strong&gt; A 6-year "Legacy Phase" (Lagos-Abuja) is the most pragmatic starting point.&lt;/span&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-10 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;a href="/HSR_Blueprint_Intelliblock_Consulting.pdf" download class="bg-gray-800 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button"&gt;Download Full White Paper (PDF)&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- About Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about" class="py-20 bg-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6 md:flex items-center justify-between"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="md:w-1/2 lg:w-5/12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl font-bold mb-4"&gt;About Ayodeji Idowu, PhD&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;Ayodeji is a "practitioner-scholar" with a rare combination of hands-on project management experience and deep expertise in quantitative economic analysis. His work sits at the intersection of finance, policy, and infrastructure development.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-6"&gt;With a PhD focused on advanced econometric modeling (FAVAR) of the Nigerian economy and a track record of de-risking multi-million dollar projects, he provides the analytical rigor needed to turn ambitious visions into meticulously planned, bankable projects.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline text-lg"&gt;Connect on LinkedIn &amp;rarr;&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="md:w-1/2 lg:w-5/12 mt-12 md:mt-0 flex justify-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- IMPORTANT: Replace this placeholder with a real headshot image --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>class="w-72 h-72 rounded-full object-cover mx-auto shadow-xl"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>src="https://placehold.co/300x300/E2E8F0/4A5568?text=AI"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>alt="A professional headshot of Ayodeji Idowu"</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>onerror="this.onerror=null;this.src='https://placehold.co/300x300/E2E8F0/4A5568?text=Image+Not+Found';"</p>
-<p class="p1"><span class="Apple-converted-space">                </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Contact Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="py-20 bg-gray-800 text-white"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold mb-4"&gt;Let's Build the Future&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"&gt;If you are a stakeholder, investor, or public official seeking to bring analytical rigor to a major infrastructure project, I am ready to collaborate.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="mailto:contact@intelliblockconsulting.com" class="bg-white text-gray-900 font-bold py-4 px-10 rounded-lg text-lg cta-button"&gt;contact@intelliblockconsulting.com&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Footer --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-gray-900 py-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-6 text-center text-gray-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&amp;copy; 2025 Intelliblock Consulting. All Rights Reserved.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Mobile menu toggle</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileMenuButton = document.getElementById('mobile-menu-button');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const mobileMenu = document.getElementById('mobile-menu');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const navLinks = document.querySelectorAll('#mobile-menu a');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>mobileMenuButton.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>mobileMenu.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Close mobile menu when a link is clicked</p>
-<p class="p1"><span class="Apple-converted-space">        </span>navLinks.forEach(link =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>mobileMenu.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header with backdrop blur for a modern look -->
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Intelliblock Consulting</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                <a href="#whitepaper" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">White Paper</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#contact" class="bg-blue-600 text-white py-2 px-5 rounded-lg hover:bg-blue-700 cta-button">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#services" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#whitepaper" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">White Paper</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg-image text-white">
+        <div class="container mx-auto px-6 py-32 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Bridging Vision & Viability</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We provide data-driven, quantitative analysis to de-risk major infrastructure projects and transform ambitious national goals into bankable realities.</p>
+            <a href="#whitepaper" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button hover:bg-blue-700">Read Our Independent Analysis</a>
+        </div>
+    </section>
+
+    <!-- Services Section with icons and hover effects -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                 <h2 class="text-3xl md:text-4xl font-bold">Our Core Expertise</h2>
+                 <p class="text-gray-600 mt-2">Specialized services to ensure project bankability.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex justify-center mb-5"><div class="bg-blue-100 p-4 rounded-full"><svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h12A2.25 2.25 0 0 0 20.25 14.25V3.75M3.75 14.25V3.75m0 10.5a2.25 2.25 0 0 0 2.25 2.25h12a2.25 2.25 0 0 0 2.25-2.25m-14.25 0V3.75" /></svg></div></div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Business Case Development</h3>
+                    <p class="text-gray-600 text-center">We build sophisticated financial models (OBC/FBC) that quantify risk, forecast viability, and meet the rigorous standards of international investors and regulatory bodies like the ICRC.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex justify-center mb-5"><div class="bg-blue-100 p-4 rounded-full"><svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-1.106-2.264 0-3.09C10.544 7.26 11.274 7 12 7c.726 0 1.451.22 2.003.659 1.106.826 1.106 2.264 0 3.09-.553.44-1.273.659-2.003.659Z" /></svg></div></div>
+                    <h3 class="text-xl font-bold mb-4 text-center">PPP Transaction Advisory</h3>
+                    <p class="text-gray-600 text-center">We structure bankable Public-Private Partnerships, aligning project goals with the fiscal realities of government and the return expectations of private capital.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex justify-center mb-5"><div class="bg-blue-100 p-4 rounded-full"><svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" /></svg></div></div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Macroeconomic & Policy Analysis</h3>
+                    <p class="text-gray-600 text-center">Leveraging advanced econometric modeling (FAVAR), we analyze the impact of fiscal and regulatory changes on project viability, providing a layer of strategic foresight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- White Paper CTA Section -->
+    <section id="whitepaper" class="py-20 bg-gray-100">
+         <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Independent Insight: The HSR Project</h2>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">Our flagship analysis, "A Data-Driven Blueprint for Delivering Nigeria's First High-Speed Rail Line by 2031," is now available.</p>
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto text-left">
+                <h3 class="text-2xl font-bold mb-6">Key Findings:</h3>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start"><svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>Bankable Vision:</strong> Projected baseline <strong>IRR of 18.2%</strong>, exceeding investor hurdles.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>The Tax Act Advantage:</strong> The 2025 Tax Act's 15-year "Priority Sector" tax credit is the critical enabler.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>Hybrid Financing is Key:</strong> A 20% (GoN) / 50% (Private) / 30% (DFI) co-financing structure is optimal.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>Political Realism:</strong> A 6-year "Legacy Phase" (Lagos-Abuja) is the most pragmatic starting point.</span></li>
+                </ul>
+                <div class="mt-10 text-center">
+                    <a href="/HSR_Blueprint_Intelliblock_Consulting.pdf" download class="bg-gray-800 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button">Download Full White Paper (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:flex items-center justify-between">
+            <div class="md:w-1/2 lg:w-5/12">
+                <h2 class="text-3xl font-bold mb-4">About Ayodeji Idowu, PhD</h2>
+                <p class="text-gray-600 mb-4">Ayodeji is a "practitioner-scholar" with a rare combination of hands-on project management experience and deep expertise in quantitative economic analysis. His work sits at the intersection of finance, policy, and infrastructure development.</p>
+                <p class="text-gray-600 mb-6">With a PhD focused on advanced econometric modeling (FAVAR) of the Nigerian economy and a track record of de-risking multi-million dollar projects, he provides the analytical rigor needed to turn ambitious visions into meticulously planned, bankable projects.</p>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline text-lg">Connect on LinkedIn &rarr;</a>
+            </div>
+            <div class="md:w-1/2 lg:w-5/12 mt-12 md:mt-0 flex justify-center">
+                <!-- IMPORTANT: Replace this placeholder with a real headshot image -->
+                <img 
+                    class="w-72 h-72 rounded-full object-cover mx-auto shadow-xl" 
+                    src="https://placehold.co/300x300/E2E8F0/4A5568?text=AI" 
+                    alt="A professional headshot of Ayodeji Idowu"
+                    onerror="this.onerror=null;this.src='https://placehold.co/300x300/E2E8F0/4A5568?text=Image+Not+Found';"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Build the Future</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">If you are a stakeholder, investor, or public official seeking to bring analytical rigor to a major infrastructure project, I am ready to collaborate.</p>
+            <a href="mailto:contact@intelliblockconsulting.com" class="bg-white text-gray-900 font-bold py-4 px-10 rounded-lg text-lg cta-button">contact@intelliblockconsulting.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Intelliblock Consulting. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
