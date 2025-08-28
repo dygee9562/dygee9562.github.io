@@ -3,141 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelliblock Consulting - Strategic Intelligence & Opportunity Origination</title>
+    <title>Intelliblock Consulting - Quantitative & Economic Analysis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        html {
-            scroll-behavior: smooth;
-        }
-        .hero-bg-image {
-            background-image: linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url('https://placehold.co/1920x1080/111827/667eea?text=Global+Network+Visualization');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        .hero-bg {
+            background-color: #111827;
         }
         .cta-button {
             transition: all 0.3s ease;
         }
         .cta-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        #mobile-menu.hidden {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        #mobile-menu {
-            max-height: 500px;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in;
-        }
-        .section-subtitle {
-            text-transform: uppercase;
-            color: #4f46e5; /* Indigo */
-            font-weight: 700;
-            letter-spacing: 0.05em;
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
-    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- LOGO IMPLEMENTATION -->
-            <a href="#home" class="flex-shrink-0">
-                <img src="logo.jpg" alt="Intelliblock Consulting Logo" class="h-12 w-auto">
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Our Philosophy</a>
-                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Services</a>
-                <a href="#insight" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Featured Insight</a>
-                <a href="#contact" class="bg-indigo-600 text-white py-2 px-5 rounded-lg hover:bg-indigo-700 cta-button">Contact</a>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">Intelliblock Consulting</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-gray-900">Services</a>
+                <a href="#whitepaper" class="text-gray-600 hover:text-gray-900">White Paper</a>
+                <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+                <a href="#contact" class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 cta-button">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden flex items-center">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <a href="#about" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">Our Philosophy</a>
-            <a href="#services" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">Services</a>
-            <a href="#insight" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">Featured Insight</a>
-            <a href="#contact" class="block py-3 px-6 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#whitepaper" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">White Paper</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg-image text-white">
-        <div class="container mx-auto px-6 py-32 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">We Originate Intelligence.</h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We synthesize public data, policy shifts, and complex market dynamics to reveal bankable opportunities where others see none.</p>
-            <a href="#services" class="bg-indigo-600 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button hover:bg-indigo-700">Explore Our Services</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-4xl mx-auto">
-                <p class="section-subtitle">OUR PHILOSOPHY</p>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">In the Information Age, the Most Valuable Asset is Clarity.</h2>
-                <p class="text-lg text-gray-600">In the dynamic and often opaque markets of Sub-Saharan Africa, leaders are inundated with data but starved for insight. Intelliblock operates differently. We are a next-generation advisory firm, combining deep contextual expertise with a proprietary AI execution engine. We don't just analyze markets; we originate them.</p>
-            </div>
+    <section class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Bridging Vision & Viability</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We provide institutional-grade analysis to de-risk major infrastructure projects and transform ambitious national goals into bankable realities.</p>
+            <a href="#whitepaper" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-lg text-lg cta-button">Read Our Institutional Analysis</a>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                 <p class="section-subtitle">A MULTI-SECTOR SUITE OF SERVICES</p>
-                 <h2 class="text-3xl md:text-4xl font-bold mt-2">Powered by the Intelliblock Protocol</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-xl font-bold mb-3">Strategic Opportunity Reports</h3>
-                    <p class="text-gray-600">Our flagship product. We develop nascent opportunities into comprehensive, "Big Four" quality business cases and market-entry blueprints.</p>
+            <h2 class="text-3xl font-bold text-center mb-12">Our Core Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Institutional-Grade Business Cases</h3>
+                    <p class="text-gray-600">We build comprehensive, data-driven financial models and strategic narratives that meet the rigorous standards of international investors and regulatory bodies.</p>
                 </div>
-                <!-- Service 2 -->
-                <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-xl font-bold mb-3">Bespoke Intelligence Briefings</h3>
-                    <p class="text-gray-600">Concise, high-impact analysis on specific topics, designed for corporate strategy teams, funds, and embassies needing rapid insight.</p>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">PPP Transaction Advisory</h3>
+                    <p class="text-gray-600">We structure bankable Public-Private Partnerships, transparently modeling risk, returns, and the public support required to attract private capital.</p>
                 </div>
-                <!-- Service 3 -->
-                <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-xl font-bold mb-3">Quantitative Due Diligence</h3>
-                    <p class="text-gray-600">We offer our core financial modeling and model auditing capabilities as a standalone service to validate a project's viability before capital commitment.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <h3 class="text-xl font-bold mb-3">Regulatory & Policy Impact Analysis</h3>
-                    <p class="text-gray-600">We model the specific, line-by-line financial impact of new legislation on a client's existing or proposed investments.</p>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Market Demand & Risk Analysis</h3>
+                    <p class="text-gray-600">Leveraging detailed market segmentation and advanced risk modeling (Monte Carlo), we provide a clear, probabilistic view of a project's potential outcomes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Insight Section (Previously White Paper) -->
-    <section id="insight" class="py-20 bg-gray-100">
-         <div class="container mx-auto px-6 text-center">
-            <p class="section-subtitle">FEATURED INSIGHT</p>
-            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Case Study: Nigeria High-Speed Rail Project</h2>
-            <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">An example of our flagship Strategic Opportunity Report. We transformed a national vision into a data-driven, bankable reality.</p>
-            <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto text-left">
-                <h3 class="text-2xl font-bold mb-6">Key Findings:</h3>
-                <ul class="space-y-4 text-gray-700">
-                    <li class="flex items-start"><svg class="w-6 h-6 text-indigo-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>Bankable Vision:</strong> Projected baseline <strong>IRR of 18.2%</strong>, exceeding investor hurdles.</span></li>
-                    <li class="flex items-start"><svg class="w-6 h-6 text-indigo-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>The Tax Act Advantage:</strong> The 2025 Tax Act's 15-year "Priority Sector" tax credit is the critical enabler.</span></li>
-                    <li class="flex items-start"><svg class="w-6 h-6 text-indigo-500 mr-3 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg><span><strong>Hybrid Financing is Key:</strong> A 20% (GoN) / 50% (Private) / 30% (DFI) co-financing structure is optimal.</span></li>
+    <!-- White Paper CTA Section -->
+    <section id="whitepaper" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Institutional Insight: The HSR Project</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">Our flagship institutional-grade analysis, **"Nigeria High-Speed Rail Project: A Bankable Business Case,"** is now available. Discover the data-backed path to making this $35 billion vision an investable reality.</p>
+             <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto text-left">
+                <h3 class="text-2xl font-bold mb-4">Investment Recommendation: CONDITIONAL BUY</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>**Bankable Returns:** The project is viable under a Public Utility Model, with a projected **Project IRR of 12.8%** and **Equity IRR of 16.2%**.</li>
+                    <li>**Phased De-risking:** A two-phase implementation, starting with a conventional rail upgrade, proves demand and reduces initial capital exposure.</li>
+                    <li>**Transparent Government Support:** The model transparently incorporates the need for a **Capital Grant** and a declining **Operating Subsidy** to ensure bankability.</li>
+                    <li>**Robust Demand:** A detailed market segmentation analysis supports a credible forecast of **6,500 daily passengers** in Year 1, growing to 18,500 by Year 10.</li>
                 </ul>
-                <div class="mt-10 text-center">
-                    <a href="/HSR_Blueprint_Intelliblock_Consulting.pdf" download class="bg-gray-800 text-white font-bold py-4 px-10 rounded-lg text-lg cta-button">Download Full Report (PDF)</a>
+                <div class="mt-8 text-center">
+                    <a href="HSR_Bankable_Business_Case_Final" download="HSR_Institutional_Business_Case_Intelliblock.pdf" class="bg-gray-800 text-white font-bold py-3 px-8 rounded-lg text-lg cta-button">Download Full Business Case (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:flex items-center">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-4">About Ayodeji Idowu, PhD</h2>
+                <p class="text-gray-600 mb-4">Ayodeji is a "practitioner-scholar" with a rare combination of hands-on project management experience and deep expertise in quantitative economic analysis. His work sits at the intersection of finance, policy, and infrastructure development.</p>
+                <p class="text-gray-600 mb-6">With a PhD focused on advanced econometric modeling (FAVAR) of the Nigerian economy and a track record of de-risking multi-million dollar projects, he provides the analytical rigor needed to turn ambitious visions into meticulously planned, bankable projects.</p>
+                <a href="https://www.linkedin.com" target="_blank" class="text-gray-800 font-bold hover:underline">Connect on LinkedIn &rarr;</a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+                <!-- Placeholder for a professional headshot -->
+                <div class="w-64 h-64 bg-gray-200 rounded-full flex items-center justify-center">
+                    <span class="text-gray-500 text-4xl font-bold">IC</span>
                 </div>
             </div>
         </div>
@@ -146,31 +118,37 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-800 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Gain Strategic Clarity</h2>
-            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Partner with us to navigate complexity and unlock value. Let's discuss how our intelligence can empower your next high-stakes decision.</p>
-            <a href="mailto:contact@intelliblock.com" class="bg-white text-gray-900 font-bold py-4 px-10 rounded-lg text-lg cta-button">contact@intelliblock.com</a>
+            <h2 class="text-3xl font-bold mb-4">Let's Build the Future</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">If you are a stakeholder, investor, or public official seeking institutional-grade analysis for a major infrastructure project, I am ready to collaborate.</p>
+            <a href="mailto:contact@intelliblockconsulting.com" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-lg text-lg cta-button">contact@intelliblockconsulting.com</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-400">
+    <footer class="bg-white py-6">
+        <div class="container mx-auto px-6 text-center text-gray-600">
             <p>&copy; 2025 Intelliblock Consulting. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
+
 </body>
 </html>
