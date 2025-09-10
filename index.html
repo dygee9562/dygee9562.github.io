@@ -3,152 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelliblock Consulting - Quantitative & Economic Analysis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="IntelliBlock converts Nigeria's policy signals into bankable infrastructure projects. Opportunity origination for DFIS, pension funds, and strategic investors.">
+    <meta name="keywords" content="Nigeria infrastructure, investment opportunities, PPP, bankability assessment, opportunity origination">
+    <title>IntelliBlock - Nigeria's Infrastructure Opportunity Origination Engine</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        :root {
+            --primary-blue: #1a5490;
+            --secondary-blue: #2c7da0;
+            --success-green: #48bb78;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --white: #ffffff;
         }
-        .hero-bg {
-            background-color: #111827;
-        }
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; line-height: 1.6; color: var(--text-dark); }
+        header { background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); color: var(--white); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; transition: opacity 0.3s; font-weight: 500; }
+        .nav-links a:hover { opacity: 0.8; }
+        .hero { margin-top: 70px; background: linear-gradient(135deg, rgba(26,84,144,0.95), rgba(44,125,160,0.95)), url('https://source.unsplash.com/random/1600x900/?nigeria,infrastructure') no-repeat center center/cover; color: var(--white); padding: 5rem 2rem; text-align: center; min-height: 500px; display: flex; align-items: center; justify-content: center; }
+        .hero-content h1 { font-size: 3rem; margin-bottom: 1.5rem; font-weight: 700; line-height: 1.2; }
+        .hero-content .subtitle { font-size: 1.4rem; margin-bottom: 2rem; opacity: 0.95; font-weight: 300; }
+        .cta-button { display: inline-block; padding: 1rem 2.5rem; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; }
+        .cta-primary { background: var(--success-green); color: var(--white); }
+        .cta-primary:hover { background: #38a169; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(72,187,120,0.3); }
+        .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-blue); text-align: center; font-weight: 700; }
+        .section-subtitle { text-align: center; color: var(--text-light); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .process-card { padding: 2rem; background: var(--white); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s; border-top: 4px solid var(--primary-blue); }
+        .process-card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .process-number { display: inline-block; width: 40px; height: 40px; background: var(--primary-blue); color: var(--white); border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold; margin-bottom: 1rem; }
+        .process-title { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 1rem; font-weight: 600; }
+        .contact-section { background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding: 5rem 2rem; text-align: center; color: var(--white); }
+        footer { background: var(--text-dark); color: var(--white); padding: 3rem 2rem; text-align: center; }
+        .footer-copyright { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-light); font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-900">Intelliblock Consulting</a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#services" class="text-gray-600 hover:text-gray-900">Services</a>
-                <a href="#whitepaper" class="text-gray-600 hover:text-gray-900">White Paper</a>
-                <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
-                <a href="#contact" class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 cta-button">Contact</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden flex items-center">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+<body>
+    <header>
+        <nav>
+            <div class="logo">INTELLIBLOCK</div>
+            <ul class="nav-links">
+                <li><a href="#process">Process</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Services</a>
-            <a href="#whitepaper" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">White Paper</a>
-            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">About</a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Contact</a>
-        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg text-white">
-        <div class="container mx-auto px-6 py-24 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Bridging Vision & Viability</h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We provide institutional-grade analysis to de-risk major infrastructure projects and transform ambitious national goals into bankable realities.</p>
-            <a href="#whitepaper" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-lg text-lg cta-button">Read Our Institutional Analysis</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Converting Policy Signals to<br>Bankable Infrastructure Projects</h1>
+            <p class="subtitle">Nigeria's First Systematic Opportunity Origination Engine</p>
+            <a href="#contact" class="cta-button cta-primary">Start a Conversation</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Core Expertise</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">Institutional-Grade Business Cases</h3>
-                    <p class="text-gray-600">We build comprehensive, data-driven financial models and strategic narratives that meet the rigorous standards of international investors and regulatory bodies.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">PPP Transaction Advisory</h3>
-                    <p class="text-gray-600">We structure bankable Public-Private Partnerships, transparently modeling risk, returns, and the public support required to attract private capital.</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-4">Market Demand & Risk Analysis</h3>
-                    <p class="text-gray-600">Leveraging detailed market segmentation and advanced risk modeling (Monte Carlo), we provide a clear, probabilistic view of a project's potential outcomes.</p>
-                </div>
+    <section id="process" class="section">
+        <h2 class="section-title">The Opportunity Origination Process</h2>
+        <p class="section-subtitle">From signal identification to transaction close, we systematically convert government momentum into investment reality.</p>
+        <div class="process-grid">
+            <div class="process-card">
+                <span class="process-number">1</span>
+                <h3 class="process-title">Signal Detection</h3>
+                <p>Monitor 500+ sources daily including government announcements, budget allocations, and policy shifts to identify opportunities 12-18 months before formal tenders.</p>
+            </div>
+            <div class="process-card">
+                <span class="process-number">2</span>
+                <h3 class="process-title">Bankability Assessment</h3>
+                <p>Apply our proprietary 40-point framework to score political commitment, fiscal capacity, implementation feasibility, and private sector opportunity.</p>
+            </div>
+            <div class="process-card">
+                <span class="process-number">3</span>
+                <h3 class="process-title">Transaction Facilitation</h3>
+                <p>Guide projects through due diligence, documentation, and regulatory approvals to achieve financial close and earn success-based fees.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="section" style="background: var(--bg-light);">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Flexible engagement models from rapid assessments to full transaction advisory.</p>
+        <div class="process-grid">
+             <div class="process-card">
+                <h3 class="process-title">Transaction Success Fees</h3>
+                <p>Our core model is success-based, typically 1-2% of total deal value. We are incentivized to get projects to financial close, not to generate reports.</p>
+            </div>
+            <div class="process-card">
+                <h3 class="process-title">Quick-Win Services</h3>
+                <p>For clients needing targeted support, we offer flat-fee services like Rapid Bankability Assessments, Investment Memoranda, and Stakeholder Mapping.</p>
             </div>
         </div>
     </section>
 
-    <!-- White Paper CTA Section -->
-    <section id="whitepaper" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Institutional Insight: The HSR Project</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">Our flagship institutional-grade analysis, **"Nigeria High-Speed Rail Project: A Bankable Business Case,"** is now available. Discover the data-backed path to making this $35 billion vision an investable reality.</p>
-             <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto text-left">
-                <h3 class="text-2xl font-bold mb-4">Investment Recommendation: CONDITIONAL BUY</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li>**Bankable Returns:** The project is viable under a Public Utility Model, with a projected **Project IRR of 12.8%** and **Equity IRR of 16.2%**.</li>
-                    <li>**Phased De-risking:** A two-phase implementation, starting with a conventional rail upgrade, proves demand and reduces initial capital exposure.</li>
-                    <li>**Transparent Government Support:** The model transparently incorporates the need for a **Capital Grant** and a declining **Operating Subsidy** to ensure bankability.</li>
-                    <li>**Robust Demand:** A detailed market segmentation analysis supports a credible forecast of **6,500 daily passengers** in Year 1, growing to 18,500 by Year 10.</li>
-                </ul>
-                <div class="mt-8 text-center">
-                    <a href="HSR_Bankable_Business_Case_Final" download="HSR_Institutional_Business_Case_Intelliblock.pdf" class="bg-gray-800 text-white font-bold py-3 px-8 rounded-lg text-lg cta-button">Download Full Business Case (PDF)</a>
-                </div>
-            </div>
-        </div>
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Ready to Originate Opportunities?</h2>
+        <p class="section-subtitle">Let's discuss how we can convert policy momentum into your next infrastructure investment.</p>
+        <a href="mailto:admin@intelliblock.zohomail.com" class="cta-button cta-primary">Schedule a Meeting</a>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6 md:flex items-center">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-bold mb-4">About Ayodeji Idowu, PhD</h2>
-                <p class="text-gray-600 mb-4">Ayodeji is a "practitioner-scholar" with a rare combination of hands-on project management experience and deep expertise in quantitative economic analysis. His work sits at the intersection of finance, policy, and infrastructure development.</p>
-                <p class="text-gray-600 mb-6">With a PhD focused on advanced econometric modeling (FAVAR) of the Nigerian economy and a track record of de-risking multi-million dollar projects, he provides the analytical rigor needed to turn ambitious visions into meticulously planned, bankable projects.</p>
-                <a href="https://www.linkedin.com" target="_blank" class="text-gray-800 font-bold hover:underline">Connect on LinkedIn &rarr;</a>
-            </div>
-            <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-                <!-- Placeholder for a professional headshot -->
-                <div class="w-64 h-64 bg-gray-200 rounded-full flex items-center justify-center">
-                    <span class="text-gray-500 text-4xl font-bold">IC</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's Build the Future</h2>
-            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">If you are a stakeholder, investor, or public official seeking institutional-grade analysis for a major infrastructure project, I am ready to collaborate.</p>
-            <a href="mailto:contact@intelliblockconsulting.com" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-lg text-lg cta-button">contact@intelliblockconsulting.com</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white py-6">
-        <div class="container mx-auto px-6 text-center text-gray-600">
-            <p>&copy; 2025 Intelliblock Consulting. All Rights Reserved.</p>
+    <footer>
+        <div class="footer-copyright">
+            <p>&copy; 2025 IntelliBlock Consulting. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Converting Nigeria's $1 Trillion GDP ambition into bankable infrastructure projects.</p>
         </div>
     </footer>
-
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
-
 </body>
 </html>
