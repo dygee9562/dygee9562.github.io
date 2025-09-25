@@ -3,124 +3,821 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="IntelliBlock converts Nigeria's policy signals into bankable infrastructure projects. Opportunity origination for DFIS, pension funds, and strategic investors.">
-    <meta name="keywords" content="Nigeria infrastructure, investment opportunities, PPP, bankability assessment, opportunity origination">
-    <title>IntelliBlock - Nigeria's Infrastructure Opportunity Origination Engine</title>
+    <meta name="description" content="IntelliBlock partners with institutional investors and governments to deliver transformative infrastructure outcomes in Nigeria and across Africa.">
+    <meta name="keywords" content="infrastructure advisory, institutional investment, Africa, project development, strategic consulting">
+    <title>IntelliBlock - Transforming Infrastructure Investment in Africa</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --primary-blue: #1a5490;
-            --secondary-blue: #2c7da0;
-            --success-green: #48bb78;
-            --text-dark: #2d3748;
-            --text-light: #718096;
-            --bg-light: #f7fafc;
-            --white: #ffffff;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; line-height: 1.6; color: var(--text-dark); }
-        header { background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); color: var(--white); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: -0.5px; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--white); text-decoration: none; transition: opacity 0.3s; font-weight: 500; }
-        .nav-links a:hover { opacity: 0.8; }
-        .hero { margin-top: 70px; background: linear-gradient(135deg, rgba(26,84,144,0.95), rgba(44,125,160,0.95)), url('https://source.unsplash.com/random/1600x900/?nigeria,infrastructure') no-repeat center center/cover; color: var(--white); padding: 5rem 2rem; text-align: center; min-height: 500px; display: flex; align-items: center; justify-content: center; }
-        .hero-content h1 { font-size: 3rem; margin-bottom: 1.5rem; font-weight: 700; line-height: 1.2; }
-        .hero-content .subtitle { font-size: 1.4rem; margin-bottom: 2rem; opacity: 0.95; font-weight: 300; }
-        .cta-button { display: inline-block; padding: 1rem 2.5rem; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem; }
-        .cta-primary { background: var(--success-green); color: var(--white); }
-        .cta-primary:hover { background: #38a169; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(72,187,120,0.3); }
-        .section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-blue); text-align: center; font-weight: 700; }
-        .section-subtitle { text-align: center; color: var(--text-light); font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .process-card { padding: 2rem; background: var(--white); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s; border-top: 4px solid var(--primary-blue); }
-        .process-card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
-        .process-number { display: inline-block; width: 40px; height: 40px; background: var(--primary-blue); color: var(--white); border-radius: 50%; text-align: center; line-height: 40px; font-weight: bold; margin-bottom: 1rem; }
-        .process-title { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 1rem; font-weight: 600; }
-        .contact-section { background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding: 5rem 2rem; text-align: center; color: var(--white); }
-        footer { background: var(--text-dark); color: var(--white); padding: 3rem 2rem; text-align: center; }
-        .footer-copyright { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-light); font-size: 0.9rem; }
+        
+        :root {
+            --primary-navy: #1a2332;
+            --secondary-navy: #243041;
+            --accent-gold: #c9a96f;
+            --text-primary: #1a2332;
+            --text-secondary: #64748b;
+            --background-light: #fafbfc;
+            --white: #ffffff;
+            --border-subtle: #e2e8f0;
+            --success-green: #059669;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--white);
+        }
+        
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .cta-button {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-1px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 85vh;
+            background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23e2e8f0" opacity="0.3"/><circle cx="30" cy="25" r="0.3" fill="%23cbd5e1" opacity="0.4"/><circle cx="60" cy="15" r="0.4" fill="%23e2e8f0" opacity="0.2"/><circle cx="80" cy="35" r="0.3" fill="%23cbd5e1" opacity="0.3"/><circle cx="20" cy="50" r="0.4" fill="%23e2e8f0" opacity="0.3"/><circle cx="50" cy="40" r="0.3" fill="%23cbd5e1" opacity="0.4"/><circle cx="85" cy="65" r="0.4" fill="%23e2e8f0" opacity="0.2"/><circle cx="15" cy="75" r="0.3" fill="%23cbd5e1" opacity="0.3"/><circle cx="45" cy="85" r="0.4" fill="%23e2e8f0" opacity="0.3"/><circle cx="75" cy="90" r="0.3" fill="%23cbd5e1" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.6;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero-headline {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            letter-spacing: -0.03em;
+        }
+        
+        .hero-subheadline {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .cta-primary {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26, 35, 50, 0.2);
+        }
+        
+        .cta-secondary {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 1rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .cta-secondary:hover {
+            border-bottom-color: var(--accent-gold);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 600px;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Capabilities Section */
+        .capabilities {
+            padding: 8rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        
+        .capability-card {
+            background: var(--white);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .capability-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent-gold);
+        }
+        
+        .capability-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--white);
+        }
+        
+        .capability-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .capability-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Sectors Section */
+        .sectors {
+            background: var(--background-light);
+            padding: 8rem 2rem;
+        }
+        
+        .sectors-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        
+        .sector-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3rem;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+        
+        .sector-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sector-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .sector-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sector-examples {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .sector-examples li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        
+        .sector-examples li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+        
+        /* Testimonial Section */
+        .testimonial {
+            padding: 6rem 2rem;
+            background: var(--primary-navy);
+            color: var(--white);
+        }
+        
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 8rem 2rem;
+            background: var(--white);
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-item {
+            padding: 2rem;
+            background: var(--background-light);
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+        }
+        
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .contact-value {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            font-weight: 500;
+        }
+        
+        .contact-value a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-value a:hover {
+            color: var(--accent-gold);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .footer-copyright {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .capabilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .sectors-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-headline {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content > * {
+            animation-delay: 0.2s;
+        }
+        
+        .hero-content > *:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        
+        .hero-content > *:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        .hero-content > *:nth-child(4) {
+            animation-delay: 0.8s;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">INTELLIBLOCK</div>
-            <ul class="nav-links">
-                <li><a href="#process">Process</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">IntelliBlock</div>
+            <nav class="nav-links">
+                <a href="#capabilities">Capabilities</a>
+                <a href="#sectors">Sectors</a>
+                <a href="#insights">Insights</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="cta-button">Schedule Discussion</a>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Converting Policy Signals to<br>Bankable Infrastructure Projects</h1>
-            <p class="subtitle">Nigeria's First Systematic Opportunity Origination Engine</p>
-            <a href="#contact" class="cta-button cta-primary">Start a Conversation</a>
-        </div>
-    </section>
-
-    <section id="process" class="section">
-        <h2 class="section-title">The Opportunity Origination Process</h2>
-        <p class="section-subtitle">From signal identification to transaction close, we systematically convert government momentum into investment reality.</p>
-        <div class="process-grid">
-            <div class="process-card">
-                <span class="process-number">1</span>
-                <h3 class="process-title">Signal Detection</h3>
-                <p>Monitor 500+ sources daily including government announcements, budget allocations, and policy shifts to identify opportunities 12-18 months before formal tenders.</p>
+            <h1 class="hero-headline fade-in">Transforming Infrastructure Investment Across Africa</h1>
+            <p class="hero-subheadline fade-in">We partner with institutional investors and governments to identify, develop, and deliver the infrastructure projects that define Africa's future.</p>
+            
+            <div class="hero-cta-group fade-in">
+                <a href="#contact" class="cta-primary">Explore Partnership</a>
+                <a href="#capabilities" class="cta-secondary">Our Approach →</a>
             </div>
-            <div class="process-card">
-                <span class="process-number">2</span>
-                <h3 class="process-title">Bankability Assessment</h3>
-                <p>Apply our proprietary 40-point framework to score political commitment, fiscal capacity, implementation feasibility, and private sector opportunity.</p>
-            </div>
-            <div class="process-card">
-                <span class="process-number">3</span>
-                <h3 class="process-title">Transaction Facilitation</h3>
-                <p>Guide projects through due diligence, documentation, and regulatory approvals to achieve financial close and earn success-based fees.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="services" class="section" style="background: var(--bg-light);">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">Flexible engagement models from rapid assessments to full transaction advisory.</p>
-        <div class="process-grid">
-             <div class="process-card">
-                <h3 class="process-title">Transaction Success Fees</h3>
-                <p>Our core model is success-based, typically 1-2% of total deal value. We are incentivized to get projects to financial close, not to generate reports.</p>
-            </div>
-            <div class="process-card">
-                <h3 class="process-title">Quick-Win Services</h3>
-                <p>For clients needing targeted support, we offer flat-fee services like Rapid Bankability Assessments, Investment Memoranda, and Stakeholder Mapping.</p>
+            
+            <div class="hero-stats fade-in">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Active Markets</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$2.5B+</div>
+                    <div class="stat-label">Projects Advised</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Ready to Originate Opportunities?</h2>
-        <p class="section-subtitle">Let's discuss how we can convert policy momentum into your next infrastructure investment.</p>
-        <a href="mailto:admin@intelliblock.zohomail.com" class="cta-button cta-primary">Schedule a Meeting</a>
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="capabilities">
+        <div class="section-header">
+            <h2 class="section-title">Deep Expertise. Proven Results.</h2>
+            <p class="section-subtitle">Our integrated approach combines market intelligence, financial structuring, and stakeholder orchestration to deliver exceptional outcomes for our clients.</p>
+        </div>
+        
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <div class="capability-icon">🎯</div>
+                <h3 class="capability-title">Strategic Advisory</h3>
+                <p class="capability-description">Navigate complex regulatory environments and political landscapes with confidence. Our deep market knowledge and government relationships enable successful project outcomes.</p>
+            </div>
+            
+            <div class="capability-card">
+                <div class="capability-icon">💼</div>
+                <h3 class="capability-title">Transaction Origination</h3>
+                <p class="capability-description">Identify and develop high-impact infrastructure opportunities before they reach the market. Systematic intelligence gathering creates competitive advantages for our partners.</p>
+            </div>
+            
+            <div class="capability-card">
+                <div class="capability-icon">🤝</div>
+                <h3 class="capability-title">Stakeholder Orchestration</h3>
+                <p class="capability-description">Coordinate complex multi-party negotiations involving government entities, international investors, and local stakeholders to achieve successful financial close.</p>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <div class="footer-copyright">
-            <p>&copy; 2025 IntelliBlock Consulting. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Converting Nigeria's $1 Trillion GDP ambition into bankable infrastructure projects.</p>
+    <!-- Sectors Section -->
+    <section id="sectors" class="sectors">
+        <div class="sectors-container">
+            <div class="section-header">
+                <h2 class="section-title">Sectors Defining Africa's Future</h2>
+                <p class="section-subtitle">We focus on the infrastructure segments with the greatest impact on economic growth and social development across the continent.</p>
+            </div>
+            
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <h3 class="sector-title">Digital Infrastructure</h3>
+                    <p class="sector-description">Enabling Africa's digital transformation through strategic telecommunications, data centers, and connectivity solutions that support economic growth and social inclusion.</p>
+                    <ul class="sector-examples">
+                        <li>Fiber optic network expansion</li>
+                        <li>Data center development</li>
+                        <li>Digital payment infrastructure</li>
+                        <li>Smart city initiatives</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <h3 class="sector-title">Transport & Logistics</h3>
+                    <p class="sector-description">Connecting markets and communities through integrated transport networks that facilitate trade, reduce costs, and improve access to economic opportunities.</p>
+                    <ul class="sector-examples">
+                        <li>Regional corridor development</li>
+                        <li>Port modernization</li>
+                        <li>Rail network expansion</li>
+                        <li>Aviation infrastructure</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <h3 class="sector-title">Energy Transition</h3>
+                    <p class="sector-description">Powering sustainable development through renewable energy projects and grid infrastructure that provide reliable, affordable, and clean energy access.</p>
+                    <ul class="sector-examples">
+                        <li>Solar and wind farms</li>
+                        <li>Grid integration projects</li>
+                        <li>Energy storage solutions</li>
+                        <li>Mini-grid deployments</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <h3 class="sector-title">Water & Sanitation</h3>
+                    <p class="sector-description">Ensuring water security and public health through innovative water treatment, distribution, and sanitation infrastructure that serves growing urban populations.</p>
+                    <ul class="sector-examples">
+                        <li>Water treatment facilities</li>
+                        <li>Distribution networks</li>
+                        <li>Sanitation systems</li>
+                        <li>Smart water management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="testimonial-container">
+            <blockquote class="testimonial-quote">
+                "IntelliBlock's deep understanding of African markets and exceptional stakeholder management capabilities were instrumental in achieving successful outcomes for our infrastructure investments."
+            </blockquote>
+            <div class="testimonial-author">Senior Investment Director, Multilateral Development Bank</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Ready to Transform Infrastructure Outcomes?</h2>
+            <p class="contact-description">Partner with us to identify, develop, and deliver the infrastructure projects that will define Africa's economic future.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-label">Direct Engagement</div>
+                    <div class="contact-value">
+                        <a href="mailto:partners@intelliblock.africa">partners@intelliblock.africa</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-label">Strategic Discussions</div>
+                    <div class="contact-value">
+                        <a href="https://calendly.com/intelliblock-strategy" target="_blank">Schedule Meeting</a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#contact" class="cta-primary">Begin Conversation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">IntelliBlock</div>
+            <p class="footer-tagline">Transforming Infrastructure Investment Across Africa</p>
+            
+            <div class="footer-links">
+                <a href="#capabilities">Capabilities</a>
+                <a href="#sectors">Sectors</a>
+                <a href="#insights">Insights</a>
+                <a href="#contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-copyright">
+                &copy; 2025 IntelliBlock. All rights reserved. | Transforming infrastructure outcomes across Africa.
+            </div>
         </div>
     </footer>
+
     <script>
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all capability cards and sector cards
+        document.querySelectorAll('.capability-card, .sector-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Header background opacity on scroll
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Add loading state for contact form
+        document.querySelectorAll('.cta-primary, .cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.href && this.href.includes('mailto:')) {
+                    // Let mailto links work normally
+                    return;
+                }
+                
+                if (this.href && this.href.includes('#contact')) {
+                    // Scroll to contact section
+                    e.preventDefault();
+                    document.getElementById('contact').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     </script>
